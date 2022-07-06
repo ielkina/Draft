@@ -1,1 +1,85 @@
 @import "path/_vars.scss";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&display=swap);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif; //шрифт
+  background-color: $color_2; //цвет заливки сайта
+  font-weight: 400; //ширина шрифта
+  font-size: 16px; //размер шрифта
+  line-height: 120%;
+  color: #fff; //цвет шрифта
+  // overflow: hidden;
+}
+
+a {
+  text-align: none; //без подчеркивания
+  color: inherit; //цвет ссылки наследуется от родителя
+}
+
+button {
+  background-color: transparent; //заливка 
+  border: none; //обводка
+  padding: 0; //отступы снаружи
+  cursor: pointer; //наводя на кнопку появляется пальчик
+}
+
+ul {
+  list-style: none; //убирает маркировку списка
+}
+
+.container {
+  max-width: 1220px; //ширина контейнера
+  margin: 0 auto; //выравнивание контейнера лево/право-авто, верх/низ-0
+  padding: 0 10px; //отступы внутри право/лево по 10рх, верх/низ -0
+}
+
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+.list {
+  display: flex;
+
+  &__item+&__item {
+    margin-left: 30px; //отступ межлу иконками кроме первого 
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &__link:hover {
+    background-color: $color_4; //цвет при наведении на ссылку
+    transition: background .3s; //плавность ховера
+  }
+}
+
+.header__content {
+  background-image: url(../img/header-img.png);
+  min-height: calc(100vh - 100px);
+
+}
+
+.title {}
+
+.title-descr {}
