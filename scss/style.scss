@@ -1,4 +1,4 @@
-@import "path/_vars.scss";
+@import "path/vars.scss";
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&display=swap);
 
 @font-face {
@@ -11,7 +11,7 @@
 
 html {
   box-sizing: border-box;
-  overflow: hidden; //убирает прокрутку на странице
+  // overflow: hidden; //убирает прокрутку на странице
 }
 
 *,
@@ -28,12 +28,12 @@ body {
   font-size: 1rem; //размер шрифта
   line-height: 120%;
   color: #fff; //цвет шрифта
-  // overflow: hidden;
 }
 
 a {
   text-align: none; //без подчеркивания
   color: inherit; //цвет ссылки наследуется от родителя
+  text-decoration: none; //убирает подчеркивание ссылки
 }
 
 button {
@@ -60,6 +60,31 @@ ul {
     align-items: center;
     height: 6.25rem;
   }
+
+  &__content {
+    background-image: url(../img/header-img.png);
+    min-height: calc(100vh - 6.25rem);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__content::before {
+    //before селектор который вставляет элемент над контейнером 
+    content: "";
+    background-image: url(../img/ico.svg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+  }
 }
 
 .list {
@@ -84,28 +109,48 @@ ul {
   }
 }
 
-.header__content {
-  background-image: url(../img/header-img.png);
-  min-height: calc(100vh - 6.25rem);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 .title {
   font-family: 'Corporate A';
   margin-bottom: 5px;
   font-size: 72px;
   line-height: 120%;
   text-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.25);
+
+  &-descr {
+    font-size: 24px;
+    text-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+  }
 }
 
-.title-descr {
-  font-size: 24px;
-  text-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.25);
-  margin-bottom: 50px;
+.footer {
+  &__inner {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+  }
+}
+
+.concept {
+  padding-top: 9.375rem;
+  margin-bottom: 9.375rem;
+  &__inner {
+    max-width: 56.25rem;
+    margin-left: auto;
+
+  }
+  &__title {
+    color: $color_1;
+    font-family: 'Corporate A';
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase; //если в макете слово заглавными буквами все равно нужно писать uppercas
+  }
+  &__text {
+    margin-bottom: 1.5625rem;
+    font-size: 24px;
+    line-height: 120%;
+  }
 }

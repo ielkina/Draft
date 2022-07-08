@@ -7,7 +7,6 @@
 }
 html {
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 *,
@@ -29,6 +28,7 @@ body {
 a {
   text-align: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
@@ -54,6 +54,28 @@ ul {
   align-items: center;
   height: 6.25rem;
 }
+.header__content {
+  background-image: url(../img/header-img.png);
+  min-height: calc(100vh - 6.25rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.header__content::before {
+  content: "";
+  background-image: url(../img/ico.svg);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
 
 .list {
   display: flex;
@@ -74,18 +96,6 @@ ul {
   transition: background 0.3s;
 }
 
-.header__content {
-  background-image: url(../img/header-img.png);
-  min-height: calc(100vh - 6.25rem);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 .title {
   font-family: "Corporate A";
   margin-bottom: 5px;
@@ -93,9 +103,37 @@ ul {
   line-height: 120%;
   text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
-
 .title-descr {
   font-size: 24px;
   text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   margin-bottom: 50px;
+}
+
+.footer__inner {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+
+.concept {
+  padding-top: 9.375rem;
+  margin-bottom: 9.375rem;
+}
+.concept__inner {
+  max-width: 56.25rem;
+  margin-left: auto;
+}
+.concept__title {
+  color: #F402A2;
+  font-family: "Corporate A";
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.concept__text {
+  margin-bottom: 1.5625rem;
+  font-size: 24px;
+  line-height: 120%;
 }

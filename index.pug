@@ -9,12 +9,12 @@ html(lang='ru')
     link(rel='stylesheet' href='css/reset.css')
     link(rel='stylesheet' href='css/slick.css')
     link(rel='stylesheet' href='css/jquery.fancybox.css')
-    link(rel='stylesheet' href='css/style.min.css')
+    link(rel='stylesheet' href='css/style.css')
   body 
     .wrapper 
       include pug/header.pug
-      //- include pug/main.pug
-      //- include pug/footer.pug 
+      include pug/main.pug
+      include pug/footer.pug
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     script(src='js/slick.min.js')
     script(src='js/jquery.fancybox.min.js')
