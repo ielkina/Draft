@@ -23,7 +23,7 @@ html {
 body {
   font-family: "Roboto Condensed", sans-serif; //шрифт
   font-style: normal;
-  background-color: $color_2; //цвет заливки сайта
+  background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%); //цвет заливки сайта
   font-weight: 400; //ширина шрифта
   font-size: 1rem; //размер шрифта
   line-height: 120%;
@@ -67,6 +67,8 @@ ul {
 }
 
 .header {
+  background-color: $color_2;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -141,6 +143,8 @@ ul {
 }
 
 .footer {
+  background-color: $color_2;
+
   &__inner {
     text-decoration: none;
     display: flex;
@@ -255,6 +259,7 @@ ul {
     grid-template-columns: 255px 255px auto 330px;
     grid-template-rows: auto auto;
     gap: 14px 44px;
+    margin-bottom: 100px;
   }
 
   &__cell-one {
@@ -277,6 +282,34 @@ ul {
   &__cell-text {
     margin-bottom: 15px;
   }
+}
 
-  &__interior-img {}
+.dising-slider_item {
+  margin: 0 30px;
+}
+
+.slick-track {
+  margin-left: -32px;
+}
+
+.design-slider {
+  margin-bottom: 25px;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  bottom: 0;
+  left: 50%;
+}
+
+.arrow-left {
+  transform: translateX(-80px);
+
+}
+
+.arrow-right {
+  transform: translateX(30px);
+
 }

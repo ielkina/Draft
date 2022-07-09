@@ -1,3 +1,5 @@
+"use strict";
+
 $(function () {
   $('.design__slider').slick({
     dots: false,
