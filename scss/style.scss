@@ -47,6 +47,19 @@ ul {
   list-style: none; //убирает маркировку списка
 }
 
+//убираем скролл 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.section__title {
+  color: $color_1;
+  font-family: 'Corporate A';
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase; //если в макете слово заглавными буквами все равно нужно писать uppercas
+}
+
 .container {
   max-width: 76.25rem; //ширина контейнера
   margin: 0 auto; //выравнивание контейнера лево/право-авто, верх/низ-0
@@ -59,6 +72,10 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 6.25rem;
+  }
+
+  &__logo {
+    margin-left: 120px;
   }
 
   &__content {
@@ -131,26 +148,135 @@ ul {
     align-items: center;
     height: 300px;
   }
+
+  &__logo {
+    margin-right: 45px;
+  }
 }
 
 .concept {
   padding-top: 9.375rem;
   margin-bottom: 9.375rem;
+
   &__inner {
     max-width: 56.25rem;
     margin-left: auto;
+  }
 
-  }
-  &__title {
-    color: $color_1;
-    font-family: 'Corporate A';
-    font-size: 18px;
-    margin-bottom: 25px;
-    text-transform: uppercase; //если в макете слово заглавными буквами все равно нужно писать uppercas
-  }
   &__text {
     margin-bottom: 1.5625rem;
     font-size: 24px;
     line-height: 120%;
   }
+}
+
+.premier {
+  margin-bottom: 150px; //отступ в низ до следующего элемента
+
+  &__inner {
+    display: flex; //распределение  колонок в контейнере
+    gap: 60px; //расстояние между колонками 
+
+  }
+
+  &__text {
+    margin-bottom: 21px; //отступы верх/низ
+  }
+
+  &__img {
+    margin-bottom: 20px; //отступ верх/низ
+  }
+
+  &__btn {
+    font-family: 'Corporate A';
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color_1;
+    text-align: center;
+    padding: .875rem;
+    border: .0625rem solid $color_1;
+    transition: all .3s;
+  }
+
+  &__btn:hover {
+    color: $color_3;
+    border: .0625rem solid $color_3;
+  }
+}
+
+.video {
+  margin-bottom: 150px;
+
+  &__img {
+    margin-bottom: 25px; //отступ вниз
+  }
+
+  &__btn {
+    font-family: 'Corporate A';
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 120%;
+    width: 100%;
+    color: $color_1;
+    padding: .875rem;
+    border: .0625rem solid $color_1;
+    transition: all .3s;
+  }
+
+  &__btn span {
+    padding-top: 2px;
+  }
+
+  &__btn path {
+    transition: all .3s; //задержка изменения цвета при ховере
+  }
+
+  &__btn:hover {
+    color: $color_3;
+    border: .0625rem solid $color_3;
+
+    //при ховере изменение цвета картинки svg
+    path {
+      fill: $color_3;
+    }
+  }
+}
+
+.design {
+  &__interior {
+    display: grid;
+    grid-template-columns: 255px 255px auto 330px;
+    grid-template-rows: auto auto;
+    gap: 14px 44px;
+  }
+
+  &__cell-one {
+    grid-row: 1/3;
+  }
+
+  &__cell-two {
+    grid-row-end: -1;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__cell-three {
+    grid-column-end: -1;
+    grid-row-end: -1;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__cell-text {
+    margin-bottom: 15px;
+  }
+
+  &__interior-img {}
 }

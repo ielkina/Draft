@@ -42,6 +42,18 @@ ul {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.section__title {
+  color: #F402A2;
+  font-family: "Corporate A";
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
 .container {
   max-width: 76.25rem;
   margin: 0 auto;
@@ -53,6 +65,9 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 6.25rem;
+}
+.header__logo {
+  margin-left: 120px;
 }
 .header__content {
   background-image: url(../img/header-img.png);
@@ -116,6 +131,9 @@ ul {
   align-items: center;
   height: 300px;
 }
+.footer__logo {
+  margin-right: 45px;
+}
 
 .concept {
   padding-top: 9.375rem;
@@ -125,15 +143,98 @@ ul {
   max-width: 56.25rem;
   margin-left: auto;
 }
-.concept__title {
-  color: #F402A2;
-  font-family: "Corporate A";
-  font-size: 18px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
 .concept__text {
   margin-bottom: 1.5625rem;
   font-size: 24px;
   line-height: 120%;
+}
+
+.premier {
+  margin-bottom: 150px;
+}
+.premier__inner {
+  display: flex;
+  gap: 60px;
+}
+.premier__text {
+  margin-bottom: 21px;
+}
+.premier__img {
+  margin-bottom: 20px;
+}
+.premier__btn {
+  font-family: "Corporate A";
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  line-height: 120%;
+  color: #F402A2;
+  text-align: center;
+  padding: 0.875rem;
+  border: 0.0625rem solid #F402A2;
+  transition: all 0.3s;
+}
+.premier__btn:hover {
+  color: #53A1CB;
+  border: 0.0625rem solid #53A1CB;
+}
+
+.video {
+  margin-bottom: 150px;
+}
+.video__img {
+  margin-bottom: 25px;
+}
+.video__btn {
+  font-family: "Corporate A";
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 120%;
+  width: 100%;
+  color: #F402A2;
+  padding: 0.875rem;
+  border: 0.0625rem solid #F402A2;
+  transition: all 0.3s;
+}
+.video__btn span {
+  padding-top: 2px;
+}
+.video__btn path {
+  transition: all 0.3s;
+}
+.video__btn:hover {
+  color: #53A1CB;
+  border: 0.0625rem solid #53A1CB;
+}
+.video__btn:hover path {
+  fill: #53A1CB;
+}
+
+.design__interior {
+  display: grid;
+  grid-template-columns: 255px 255px auto 330px;
+  grid-template-rows: auto auto;
+  gap: 14px 44px;
+}
+.design__cell-one {
+  grid-row: 1/3;
+}
+.design__cell-two {
+  grid-row-end: -1;
+  display: flex;
+  align-items: flex-end;
+}
+.design__cell-three {
+  grid-column-end: -1;
+  grid-row-end: -1;
+  display: flex;
+  align-items: flex-end;
+}
+.design__cell-text {
+  margin-bottom: 15px;
 }
