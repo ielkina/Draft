@@ -36,6 +36,10 @@ a {
   text-decoration: none; //убирает подчеркивание ссылки
 }
 
+img {
+  max-width: 100%;
+}
+
 button {
   background-color: transparent; //заливка 
   border: none; //обводка
@@ -48,9 +52,9 @@ ul {
 }
 
 // убираем скролл 
-::-webkit-scrollbar {
-  width: 0;
-}
+// ::-webkit-scrollbar {
+//   width: 0;
+// }
 
 .section__title {
   color: $color_1;
@@ -159,8 +163,8 @@ ul {
 }
 
 .concept {
-  padding-top: 9.375rem;
-  margin-bottom: 9.375rem;
+  padding-top: 150px;
+  margin-bottom: 150px;
 
   &__inner {
     max-width: 56.25rem;
@@ -340,3 +344,5 @@ ul {
     margin-bottom: 15px;
   }
 }
+
+@import "path/media.scss";
